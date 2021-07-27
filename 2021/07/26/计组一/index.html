@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>计组一 - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="
+主存储器的基本组成存储体，MAR（MAR位数反应存储单元的个数，最多支持多少个）,MDR（MDR位数=存储字长=每个存储单元的大小）
+存储体    存储单元：每个存储单元存放一串二进制代码
+存储字,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://little-caiyin.github.io"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">计组一</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">计组一</h1>
+        <div class="stuff">
+            <span>七月 26, 2021</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <p><img src="../../../../../AppData/Roaming/Typora/typora-user-images/image-20210726093448471.png" alt="image-20210726093448471"></p>
+<h4 id="主存储器的基本组成"><a href="#主存储器的基本组成" class="headerlink" title="主存储器的基本组成"></a>主存储器的基本组成</h4><p>存储体，MAR（MAR位数反应存储单元的个数，最多支持多少个）,MDR（MDR位数=存储字长=每个存储单元的大小）</p>
+<p><strong>存储体</strong>    存储单元：每个存储单元存放一串二进制代码</p>
+<p>存储字：存储单元中二进制代码的组合       存储字长：存储单元中二进制代码的位数</p>
+<p>存储元：存储二进制的电子元件，每个存储元可存1bit</p>
+<h4 id="运算器的基本组成"><a href="#运算器的基本组成" class="headerlink" title="运算器的基本组成"></a>运算器的基本组成</h4><p>ACC:累加器，用于存放操作数，或运算结果。</p>
+<p>MQ:乘商寄存器，在乘，除运算时，用于存放操作数或运算结果。</p>
+<p>X：通用的操作数寄存器，用于存放操作数。</p>
+<p>*ALU:算术逻辑单元，通过内部复杂的电路实现算数运算，逻辑运算。</p>
+<h4 id="控制器的基本组成"><a href="#控制器的基本组成" class="headerlink" title="控制器的基本组成"></a>控制器的基本组成</h4><p>*CU:控制单元，分析指令，给出控制信号</p>
+<p>IR:指令寄存器，存放当前执行的指令</p>
+<p>PC：程序计数器，存放下一条指令地址，有自动加1功能</p>
+<p><img src="../../../../../AppData/Roaming/Typora/typora-user-images/image-20210727103609271.png" alt="image-20210727103609271"></p>
+<h4 id="工作过程"><a href="#工作过程" class="headerlink" title="工作过程"></a>工作过程</h4><p>初始：指令，数据存入主存，PC指向第一条指令；从主存中取指令放入IR,PC自动加1，CU分析指令，CU指挥其他部件执行指令</p>
+<h4 id="计算机层次结构"><a href="#计算机层次结构" class="headerlink" title="计算机层次结构"></a>计算机层次结构</h4><p>五层：M0：微程序机器（执行微指令），M1：传统机器（执行机器语言指令），M2：操作系统机器（向上提供广义指令），M3：汇编语言机器（执行汇编语言），M4：高级语言机器（执行高级语言）</p>
+<h4 id="存储器的性能指标"><a href="#存储器的性能指标" class="headerlink" title="存储器的性能指标"></a>存储器的性能指标</h4><p>总容量=存储单元个数 * 存储字长 bit=存储单元个数 * 存储字长/8 Byte</p>
+<p>CPU主频：CPU内数字脉冲信号振荡的频率</p>
+<p>CPU<strong>主频</strong>（时钟频率）=1/CPU时钟周期  </p>
+<p><strong>CPI</strong>：执行一条指令所需的时钟周期数     执行一条指令的耗时=CPI*CPU时钟周期</p>
+<p><strong>CPU执行时间</strong>=CPU时钟周期/主频=（指令条数*CPI）/主频</p>
+<p><strong>IPS</strong>:每秒执行多少条指令  IPS=主频/平均CPI</p>
+<p>FLOPS:每秒执行多少次浮点运算</p>
+<p><img src="../../../../../AppData/Roaming/Typora/typora-user-images/image-20210726175527206.png" alt="image-20210726175527206"></p>
+<h4 id="奇偶校验码"><a href="#奇偶校验码" class="headerlink" title="奇偶校验码"></a>奇偶校验码</h4><p>奇校验码：整个校验码（有效信息位和校验位）中“1”的个数为奇数</p>
+<p>偶校验码：整个校验码（有效信息位和校验位）中“1”的个数为偶数</p>
+<h4 id="总线"><a href="#总线" class="headerlink" title="总线"></a>总线</h4><h4 id="总线的概念"><a href="#总线的概念" class="headerlink" title="总线的概念"></a>总线的概念</h4><p>总线是连接各个部件的信息传输线，是各个部件共享的传输介质。</p>
+<p>总线上信息的传送：串行，并行</p>
+<h4 id="总线的分类"><a href="#总线的分类" class="headerlink" title="总线的分类"></a>总线的分类</h4><p>1.片内总线   芯片内部的总线</p>
+<p>2.系统总线   计算机各部件之间的信息传输线</p>
+<p><strong>数据总线</strong>     双向   与机器字长，存储字长有关       <strong>地址总线</strong>    单向   与存储地址，I/O地址有关</p>
+<p><strong>控制总线</strong>   有出  有入</p>
+<p>3.通信总线   用于计算机系统之间或计算机系统与其他系统（如控制仪表，移动通信等）之间的通信</p>
+<p>传输方式：串行通信总线   并行通信总线</p>
+<h4 id="总线特性及性能指标"><a href="#总线特性及性能指标" class="headerlink" title="总线特性及性能指标"></a>总线特性及性能指标</h4><p>总线特性：1.机械特性（尺寸，形状，管脚数及排列顺序）  2.电气特性（传输方式和有效的电平范围）</p>
+<p>3.功能特性（每根传输线的功能&lt;地址，数据，控制&gt;）  4.时间特性（信号的时序关系）</p>
+<p>总线的性能指标：1.总线宽度（数据线的根数）2.标准传输率（每秒传输的最大字节数） 3.时钟同步/异步（同步，不同步） 4.总线复用（地址数与数据线复用） 5.信号线数（地址线，数据线和控制线的总和） 6.总线控制方式（突发，自动，仲裁，逻辑，计数） 7.其他指标（负载能力）</p>
+<h4 id="总线的结构"><a href="#总线的结构" class="headerlink" title="总线的结构"></a>总线的结构</h4><p>多总线结构：1.双总线结构  2.三总线结构  3.三总线结构的又一形式  4.四总线结构</p>
+<h4 id="总线控制"><a href="#总线控制" class="headerlink" title="总线控制"></a>总线控制</h4><p>BS-总线忙，BR-总线请求</p>
+<p><strong>总线通信控制</strong></p>
+<p>1.目的：解决通信双方 协调配合 问题</p>
+<p>2.总线传输周期：申请分配阶段（主模块申请，总线仲裁决定），寻址阶段（主模块向从模块 给出地址和命令），传数阶段（主模块和从模块 交换数据），结束阶段（主模块 撤消有关信息）</p>
+<p>总线通信的四种方式：同步通信（由统一时标控制数据传送），异步通信（采用应答方式，没有公共时钟标准），半同步通信（同步，异步结合），分离式通信（充分 挖掘系统总线每个瞬间的潜力）</p>
+<p>前三种通信的共同点：一个总线传输周期（以输入数据为例）    主模块发地址，命令（占用总线），从模块准备数据（不占用总线），从模块向主模块发数据（占用总线）</p>
+<p>分离式通信：一个总线传输周期   子周期1（主模块申请占用总线，使用完后即放弃总线的使用权），子周期2（从模块申请占用总线，将各种信息传至总线上）</p>
+<p>分离式通信特点：1.各模块有权申请占用总线 2.采用同步方式通信，不等对方回答 3.各模块准备数据时，不占用总线 4.总线被占用时，无空闲</p>
+<h4 id="存储器"><a href="#存储器" class="headerlink" title="存储器"></a>存储器</h4><h4 id="存储器分类"><a href="#存储器分类" class="headerlink" title="存储器分类"></a>存储器分类</h4><p><strong>1.按存储介质分类</strong></p>
+<p>（1）半导体存储器  TTL,MOS   （2）磁表面存储器  磁头，载磁体   （3）磁芯存储器  硬磁材料，环状元件  （4）光盘存储器   激光，磁光材料</p>
+<p><strong>2.按存取方式分类</strong></p>
+<p>（1）存取时间与物理地址无关（随机访问）    随机存储器（在程序的执行过程中可读可写）   只读存储器（在程序的执行过程中只读）</p>
+<p>（2）存取时间与物理地址有关（串行访问）    顺序存取存储器（磁带）     直接存取存储器（磁盘）</p>
+<p><strong>3.按在计算机中的作用分类</strong></p>
+<p><img src="../../../../../AppData/Roaming/Typora/typora-user-images/image-20210727172426660.png" alt="image-20210727172426660"></p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
