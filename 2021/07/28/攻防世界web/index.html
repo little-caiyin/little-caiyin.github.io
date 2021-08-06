@@ -5,12 +5,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Archive</title>
+    <title>攻防世界web - Hexo</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    
+    <meta name="description" content="Robots协议Robots协议（也称为爬虫协议、机器人协议等）的全称是“网络爬虫排除标准”（Robots Exclusion Protocol），网站通过Robots协议告诉搜索引擎哪些页面可以抓,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -33,69 +33,76 @@
 <body class="loading">
     <span id="config-title" style="display:none">Hexo</span>
     <div id="loader"></div>
-    <div id="single" class="page">
-    <div id="top">
-        <a class="iconfont icon-left image-icon" href="javascript:history.back()"></a>
-    </div>
-    <div class="section">
-        <div class="article">
-            <div class="main">
-                <div class="content">
-                    <div class="timeline">
-                      <h2 class="timeline-title">归档: 7篇</h2><hr>
-                      
-                      
-                        
-                          <h3 class="timeline-subtitle">2021</h3>
-                        
-                        <div class="timeline-item">
-                          <time>2021-08-04</time>
-                          <a target="_self" href="/2021/08/04/Python/">Python</a>
-                        </div>
-                      
-                        
-                        <div class="timeline-item">
-                          <time>2021-07-28</time>
-                          <a target="_self" href="/2021/07/28/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/">软件工程</a>
-                        </div>
-                      
-                        
-                        <div class="timeline-item">
-                          <time>2021-07-28</time>
-                          <a target="_self" href="/2021/07/28/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8Cweb/">攻防世界web</a>
-                        </div>
-                      
-                        
-                        <div class="timeline-item">
-                          <time>2021-07-26</time>
-                          <a target="_self" href="/2021/07/26/%E8%AE%A1%E7%BB%84%E4%B8%80/">计组一</a>
-                        </div>
-                      
-                        
-                        <div class="timeline-item">
-                          <time>2021-05-27</time>
-                          <a target="_self" href="/2021/05/27/web%E6%B8%97%E9%80%8F%E5%AD%A6%E4%B9%A0/">web渗透学习</a>
-                        </div>
-                      
-                        
-                        <div class="timeline-item">
-                          <time>2021-03-28</time>
-                          <a target="_self" href="/2021/03/28/hello-world/">Hello World</a>
-                        </div>
-                      
-                        
-                        <div class="timeline-item">
-                          <time>2021-01-06</time>
-                          <a target="_self" href="/2021/01/06/my-first-blog/">我的第一篇博客</a>
-                        </div>
-                      
-                    </div>
-                </div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://little-caiyin.github.io"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">攻防世界web</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
             </div>
+            <div id="qr"></div>
         </div>
     </div>
+    <div class="scrollbar"></div>
 </div>
 
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">攻防世界web</h1>
+        <div class="stuff">
+            <span>七月 28, 2021</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h3 id="Robots协议"><a href="#Robots协议" class="headerlink" title="Robots协议"></a>Robots协议</h3><p>Robots协议（也称为爬虫协议、机器人协议等）的全称是“网络爬虫排除标准”（Robots Exclusion Protocol），网站通过Robots协议告诉搜索引擎哪些页面可以抓取，哪些页面不能抓取。<br>robots协议通常以robots.txt存在，robots.txt文件是一个文本文件，robots.txt是一个协议，而不是一个命令。robots.txt是搜索引擎中访问网站的时候要查看的第一个文件。robots.txt文件告诉蜘蛛程序在服务器上什么文件是可以被查看的。</p>
+<p><strong>robots.txt文件写法</strong></p>
+<p>User-agent: * 这里的代表的所有的搜索引擎种类，是一个通配符<br>Disallow: /admin/ 这里定义是禁止爬寻admin目录下面的目录<br>Disallow: /require/ 这里定义是禁止爬寻require目录下面的目录<br>Disallow: /ABC/ 这里定义是禁止爬寻ABC目录下面的目录<br>Disallow: /cgi-bin/.htm 禁止访问/cgi-bin/目录下的所有以”.htm”为后缀的URL(包含子目录)。<br>Disallow: /?* 禁止访问网站中所有包含问号 (?) 的网址<br>Disallow: /.jpg$ 禁止抓取网页所有的.jpg格式的图片<br>Disallow:/ab/adc.html 禁止爬取ab文件夹下面的adc.html文件。<br>Allow: /cgi-bin/　这里定义是允许爬寻cgi-bin目录下面的目录<br>Allow: /tmp 这里定义是允许爬寻tmp的整个目录<br>Allow: .htm$ 仅允许访问以”.htm”为后缀的URL。<br>Allow: .gif$ 允许抓取网页和gif格式图片<br>Sitemap: 网站地图 告诉爬虫这个页面是网站地图</p>
+<h3 id="backup"><a href="#backup" class="headerlink" title="backup"></a>backup</h3><p>常见的备份文件后缀名有：.git     .svn     .swp     .svn     .~     .bak     .bash_history</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
 </body>
 
 

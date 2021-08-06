@@ -61,14 +61,14 @@
         </div>
         <div class="content markdown">
             <h3 id="服务端动态脚本"><a href="#服务端动态脚本" class="headerlink" title="服务端动态脚本"></a>服务端动态脚本</h3><p>指放在服务器端才能运行的语言，，每种语言都需要服务器端环境支撑。像asp需要lis，php需要Apache等等。在本地端能用本地浏览器打开的网页像HTML，htm，shtml都属于静态。服务端的动态脚本语言种类：</p>
-<p><img src="C:\Users\sleepy\AppData\Roaming\Typora\typora-user-images\image-20210527205846660.png" alt="image-20210527205846660"></p>
+<p><img src="https://gitee.com/shao-caiyin/images/raw/master/img/image-20210527205846660.png" alt="image-20210527205846660"></p>
 <h3 id="最流行，占市场率最高的php语言"><a href="#最流行，占市场率最高的php语言" class="headerlink" title="最流行，占市场率最高的php语言"></a>最流行，占市场率最高的php语言</h3><p>搭建环境</p>
 <h3 id="漏洞环境原理"><a href="#漏洞环境原理" class="headerlink" title="漏洞环境原理"></a>漏洞环境原理</h3><p>SQL注入（数据库注入）</p>
 <p>因相当大一部分程序员在编写代码时没有对用户输入数据的合法性进行判断，使得应用程序存在安全隐患。用户可以提交一段数据库查询代码，根据程序返回的结果，获得某些他想得知的数据，这就是所谓的SQL Injection，即<strong>SQL注入</strong>。</p>
 <p>还需要明白：SQL注入攻击的不是像php这样的动态语言本身，而是它背后的数据库。所有的服务端动态脚本语言都可以连接数据库，像aspx连接mssql、php常用的是mysql，jsp是oracle等等。</p>
 <h3 id="SQL注入需要的工具"><a href="#SQL注入需要的工具" class="headerlink" title="SQL注入需要的工具"></a>SQL注入需要的工具</h3><p>Windows：1.python27，sqlmap需要 2.sqlmap。下载完解压所有文件到一个目录就行，好比解压到d:/sqlmap。该工具用python语言写的，支持跨平台运行，具有一百多个命令行参数。你会安装后，你就会了系统和python环境配置。如果你能掌握所有的参数后，我相信你已经对最流行的数据库注入攻击有了相当深的了解了。Sqlmap是注入神器，有了它你可以扔掉所有注入工具了，它也是个撩妹高手，因为它基本支持了市面上所有数据库，并且注入的姿势（Payload）花样繁多，让你眼花缭乱的。</p>
 <p>在这里假设你的python27装在c:/python27，你的sqlmap解压在d:/sqlmap，你可以在命令行底下先执行一条命令就可以直接调用了，命令如下：path=c:/python27;d:/sqlmap</p>
-<p><img src="C:\Users\sleepy\AppData\Roaming\Typora\typora-user-images\image-20210527221531921.png" alt="image-20210527221531921"></p>
+<p><img src="https://gitee.com/shao-caiyin/images/raw/master/img/image-20210527221531921.png" alt="image-20210527221531921"></p>
 <h3 id="实例讲解sqlmap最基本用法"><a href="#实例讲解sqlmap最基本用法" class="headerlink" title="实例讲解sqlmap最基本用法"></a>实例讲解sqlmap最基本用法</h3><h4 id="请注意在注入过程中-D、-T、-C这三个库、表、字段的参数都是用大写的，查询结果不用。要查询某个结果，参数前都用–的，像–tables。"><a href="#请注意在注入过程中-D、-T、-C这三个库、表、字段的参数都是用大写的，查询结果不用。要查询某个结果，参数前都用–的，像–tables。" class="headerlink" title="请注意在注入过程中-D、-T、-C这三个库、表、字段的参数都是用大写的，查询结果不用。要查询某个结果，参数前都用–的，像–tables。"></a>请注意在注入过程中-D、-T、-C这三个库、表、字段的参数都是用大写的，查询结果不用。要查询某个结果，参数前都用–的，像–tables。</h4><h4 id="1，检测漏洞：运行："><a href="#1，检测漏洞：运行：" class="headerlink" title="1，检测漏洞：运行："></a>1，检测漏洞：运行：</h4><p>c:/python27/python.exe d:/sqlmap/sqlmap.py -u <a target="_blank" rel="noopener" href="http://localhost/book/admin/lyedit.php?ly_id=2">http://localhost/book/admin/lyedit.php?ly_id=2</a></p>
 <p>或path=c:/python27;d:/sqlmap再sqlmap.py -u <a target="_blank" rel="noopener" href="http://localhost/book/admin/lyedit.php?ly_id=2">http://localhost/book/admin/lyedit.php?ly_id=2</a></p>
 <p>-u参数是表示后边要跟着的网站链接(URL)，如果后边的URL像是”1.php?id=2&amp;name=3”里边有两个&amp;符号的，在windows下请把URL用双引号引起来，如果在linux下倒是不用。回车后，如果出现询问Y/n的，你一直按下回车键就行了。按回车就表示Y，输入n表示不同意。</p>
@@ -92,10 +92,10 @@
 <p><strong>例子：</strong>直接发送链接后让管理员自动删掉这个留言本的一条留言。</p>
 <p>我们进入留言本的后台留言管理，右键在删除留言上点击复制链接，会得到链接：<a target="_blank" rel="noopener" href="http://localhost/book/admin/ly_manage.php?act=del&amp;ly_id=5">http://localhost/book/admin/ly_manage.php?act=del&amp;ly_id=5</a></p>
 <p>我们在留言本主页面留言，在头像哪儿输入：</p>
-<p><img src="C:\Users\sleepy\AppData\Roaming\Typora\typora-user-images\image-20210528162919676.png" alt="image-20210528162919676"></p>
+<p><img src="https://gitee.com/shao-caiyin/images/raw/master/img/image-20210528162919676.png" alt="image-20210528162919676"></p>
 <p>上面 window.location.href 是调用JS让浏览器页面自动转向到删除页面。</p>
 <p>我们提交后，等到管理员登陆后台查看留言时就会自动删除“ly_id=5”的留言了，起到了一个破坏作用。如果你做了这次测试，发现留言本不好用了，请用root、root登陆“<a target="_blank" rel="noopener" href="http://localhost/phpmyadmin%E2%80%9D%EF%BC%8C%E5%88%A0%E6%8E%89test%E5%BA%93%E4%B8%ADly%E8%A1%A8%E9%87%8C%E4%BD%A0%E6%8F%90%E4%BA%A4%E7%9A%84%E6%81%B6%E6%84%8F%E6%95%B0%E6%8D%AE%E3%80%82">http://localhost/phpmyadmin”，删掉test库中ly表里你提交的恶意数据。</a></p>
-<img src="C:\Users\sleepy\AppData\Roaming\Typora\typora-user-images\image-20210528173857921.png" alt="image-20210528173857921" style="zoom:80%;" />
+<img src="https://gitee.com/shao-caiyin/images/raw/master/img/image-20210528173857921.png" alt="image-20210528173857921" style="zoom:80%;" />
 
 
 
@@ -112,9 +112,9 @@
 <p>存储型：攻击代码位置：数据库；输出：HTTP响应</p>
 <p>反射型：攻击代码位置：url     ；输出：HTTP响应。</p>
 <p>DOM型：攻击代码位置：url    ；输出：DOM节点。  </p>
-<p><img src="C:\Users\sleepy\AppData\Roaming\Typora\typora-user-images\image-20210528173450159.png" alt="image-20210528173450159"></p>
+<p><img src="https://gitee.com/shao-caiyin/images/raw/master/img/image-20210528173450159.png" alt="image-20210528173450159"></p>
 <p>传统web站点渗透测试基本步骤</p>
-<p><img src="C:\Users\sleepy\AppData\Roaming\Typora\typora-user-images\image-20210528174516062.png" alt="image-20210528174516062"></p>
+<p><img src="https://gitee.com/shao-caiyin/images/raw/master/img/image-20210528174516062.png" alt="image-20210528174516062"></p>
 <h4 id="SQL逐入漏洞"><a href="#SQL逐入漏洞" class="headerlink" title="SQL逐入漏洞"></a>SQL逐入漏洞</h4><p>sqlmap 发现和利用sql注入漏洞基本流程：1，找到有数据库交互的功能页面(如：xxx/artist.php?artist=1    问号+参数) 2，判断页面是否存在sql注入(artist=1’ 报错存在注入) 3，利用sql注入漏洞读取数据</p>
 <p><strong>进行注入尝试</strong>：GET/POST</p>
 <p><img src="https://img-blog.csdn.net/20180718114314485?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NDE5MDEz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
