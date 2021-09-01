@@ -104,6 +104,7 @@
 <h3 id="Cookie和Session"><a href="#Cookie和Session" class="headerlink" title="Cookie和Session"></a>Cookie和Session</h3><p>1，Cookie：有时也用其复数形式 Cookies，指某些网站为了辨别用户身份、进行跟踪而储存在用户本地终端上的数据。简单来讲，这东西是存贮在你电脑或手机上的，是可以清理掉的。为什么你登陆了今日头条后，不需要再登陆就是它在起作用，我们客户端是可以清理或按网站格式伪造的Cookie。</p>
 <p>2，Session：在计算机中，尤其是在网络应用中，称为“会话控制”。Session 对象存储特定用户会话所需的属性及配置信息。这样，当用户在应用程序的 Web 页之间跳转时，存储在 Session 对象中的变量将不会丢失，而是在整个用户会话中一直存在下去。</p>
 <p>简地讲cookie和session的作用是一样的，不过一个在本地你的电脑端贮存，一个在服务器上贮存。cookie你可以随时伪造修改，session如果你没有拿到网站权限时是不可以的。</p>
+<p>$_POST [用于接收post提交的数据]<br>$_GET [用于获取url地址栏的参数数据]<br>$_FILES [用于文件就收的处理img 最常见]<br>$_COOKIE [用于获取与setCookie()中的name 值]<br>$_SESSION [用于存储session的值或获取session中的值]<br>$_REQUEST [具有get,post的功能，但比较慢]</p>
 <h3 id="黑盒渗透实战拿到网站权限"><a href="#黑盒渗透实战拿到网站权限" class="headerlink" title="黑盒渗透实战拿到网站权限"></a>黑盒渗透实战拿到网站权限</h3><p><strong>黑盒渗透：</strong>指在没有网站源码的情况下进行渗透测试；如果分析网站源码找到漏洞攻击，黑客界的行话叫作白盒<strong>代码审计</strong></p>
 <p><strong>Webshell</strong>：指的是通过黑客手段在服务器上放一个asp、php、jsp或其它格式的动态脚本，对网站有了基本的网页修改、数据库控制、执行命令等低权限操作。</p>
 <h4 id="web基础知识"><a href="#web基础知识" class="headerlink" title="web基础知识"></a>web基础知识</h4><p>前端漏洞：钓鱼、暗链、xss、点击劫持、csrf、url跳转。后端漏洞：sql注入、命令注入、文件上传、文件包含、暴力破解</p>
