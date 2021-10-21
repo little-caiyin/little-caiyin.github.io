@@ -10,7 +10,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    
+    <meta name="description" content="
+listen函数是对套接字的监听，阻塞的是后面的accept函数，
+进程：当运行时间用完时进程会由运行状态回到就绪状态
+线程：实现了进程的并发性，可以在一个进程内同时进行多项工作。
+线程函数的原型,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -60,7 +64,15 @@
 
         </div>
         <div class="content markdown">
-            
+            <p><img src="https://gitee.com/shao-caiyin/images/raw/master/img/image-20210923143307622.png" alt="image-20210923143307622"></p>
+<p>listen函数是对套接字的监听，阻塞的是后面的accept函数，</p>
+<p><strong>进程</strong>：当运行时间用完时进程会由运行状态回到就绪状态</p>
+<p><strong>线程</strong>：实现了进程的并发性，可以在一个进程内同时进行多项工作。</p>
+<h4 id="线程函数的原型"><a href="#线程函数的原型" class="headerlink" title="线程函数的原型"></a>线程函数的原型</h4><p>DWORD_stdcall ThreadFunc(LPVOID IpvThreadParm);</p>
+<p>_stdcall;函数从右向左压入堆栈，由被调函数清理堆栈。</p>
+<p>_cdecl:函数从左向右压入堆栈，由调用函数清理堆栈。</p>
+<p>LPVOID的类型定义如下：typedef void * LPVOID</p>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
                 <source type="audio/mpeg" src="">
