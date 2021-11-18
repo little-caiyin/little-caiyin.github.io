@@ -1,0 +1,479 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>网络攻防技术 - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="第1章 信息收集收集域名信息Whois查询​        Whois是一个标准的互联网协议，可用于收集网络注册信息，注册的域名、IP地址等信息。Whois就是一个用于查询域名是否已被注册以及注册域,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://little-caiyin.github.io"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">网络攻防技术</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">网络攻防技术</h1>
+        <div class="stuff">
+            <span>十一月 06, 2021</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h3 id="第1章-信息收集"><a href="#第1章-信息收集" class="headerlink" title="第1章 信息收集"></a>第1章 信息收集</h3><h4 id="收集域名信息"><a href="#收集域名信息" class="headerlink" title="收集域名信息"></a>收集域名信息</h4><h5 id="Whois查询"><a href="#Whois查询" class="headerlink" title="Whois查询"></a>Whois查询</h5><p>​        Whois是一个标准的互联网协议，可用于收集网络注册信息，注册的域名、IP地址等信息。Whois就是一个用于查询域名是否已被注册以及注册域名的详细信息的数据库（如域名所有人、域名注册商)。在Whois查询中，得到注册人的姓名和邮箱信息通常对测试个人站点非常有用，因为我们可以通过搜索引擎和社交网络挖掘出域名所有人的很多信息。对中小站点而言，域名所有人往往就是管理员。</p>
+<p>​          在Kali系统中，Whois已经默认安装,只需输入要查询的域名即可。在线Whois查询的常用网站有爱站工具网(<a target="_blank" rel="noopener" href="https://whois.aizhan.com)、站长之家/">https://whois.aizhan.com)、站长之家</a>( <a target="_blank" rel="noopener" href="http://whois.chinaz.com)和virustotal/">http://whois.chinaz.com）和VirusTotal</a> (<a target="_blank" rel="noopener" href="https://www.virustotal.com),通过这些网站可以查询域名的相关信息,如域名服务商、域名拥有者,以及他们的邮箱、电话、地址等./">https://www.virustotal.com)，通过这些网站可以查询域名的相关信息，如域名服务商、域名拥有者，以及他们的邮箱、电话、地址等。</a></p>
+<h5 id="备案信息查询"><a href="#备案信息查询" class="headerlink" title="备案信息查询"></a>备案信息查询</h5><p>网站备案是根据国家法律法规规定，需要网站的所有者向国家有关部门申请的备案，这是国家信息产业部对网站的一种管理，为了防止在网上从事非法的网站经营活动的发生。主要针对国内网站，如果网站搭建在其他国家，则不需要进行备案。</p>
+<p>常用的网站有以下这两个。站长之家: <a target="_blank" rel="noopener" href="http://whois.chinaz.com/">http://whois.chinaz.com</a> 。天眼查: <a target="_blank" rel="noopener" href="http://www.tianyancha.com/">http://www.tianyancha.com</a> 。</p>
+<h4 id="收集敏感信息"><a href="#收集敏感信息" class="headerlink" title="收集敏感信息"></a>收集敏感信息</h4><p>Google是世界上最强的搜索引擎之一，对一位渗透测试者而言，它可能是一款绝佳的黑客工具。我们可以通过构造特殊的关键字语法来搜索互联网上的相关敏感信息。</p>
+<p>表1.1 Google的常用语法及其说明</p>
+<table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Site</td>
+<td>指定域名</td>
+</tr>
+<tr>
+<td>Inurl</td>
+<td>URL中存在关键字的网页</td>
+</tr>
+<tr>
+<td>Intext</td>
+<td>网页正文中的关键字</td>
+</tr>
+<tr>
+<td>Filetype</td>
+<td>指定文件类型</td>
+</tr>
+<tr>
+<td>Inthtle</td>
+<td>网页标题中的关键字</td>
+</tr>
+<tr>
+<td>link</td>
+<td>link:baidu.com即表示返回所有和baidu.com做了链接的URL</td>
+</tr>
+<tr>
+<td>Info</td>
+<td>查找指定站点的一些基本信息</td>
+</tr>
+<tr>
+<td>cache</td>
+<td>搜索Google里关于某些内容的缓存</td>
+</tr>
+</tbody></table>
+<p>当然，不仅是Google搜索引擎，这种搜索思路还可以用在百度、雅虎、Bing、Shodan等搜索引擎上，其语法也大同小异。除此之外，也可以尝试在GitHub上寻找相关敏感信息，如数据库连接信息、邮箱密码、uc-key、阿里的osskey，有时还可以找到泄露的源代码等。可以通过<strong>乌云漏洞表</strong>（<a target="_blank" rel="noopener" href="https://wooyun.shuimugan.com/">https://wooyun.shuimugan.com</a>）查询历史漏洞信息。</p>
+<h4 id="收集子域名信息"><a href="#收集子域名信息" class="headerlink" title="收集子域名信息"></a>收集子域名信息</h4><p>子域名也就是二级域名，是指顶级域名下的域名。假设我们的目标网络规模比较大，直接从主域入手显然是很不理智的，因为对于这种规模的目标，一般其主域都是重点防护区域，所以不如先进入目标的某个子域，然后再想办法迂回接近真正的目标，这无疑是个比较好的选择。尽可能多的搜集目标的高价值子域的方法：</p>
+<p><strong>1.子域名检测工具：</strong>用于子域名检测的工具主要有Layer子域名挖掘机、K8、wydomain、Sublist3r、dnsmaper、subDomainsBrute、Maltego CE等。笔者重点推荐Layer子域名挖掘机、Sublist3r和subDomainsBrute。</p>
+<p><strong>2.搜索引擎枚举：</strong>可以利用Google语法搜索子域名,例如要搜索百度旗下的子域名就可以使用“site:baidu.com”语法。</p>
+<p><strong>3.第三方聚合应用枚举：</strong>很多第三方服务汇聚了大量DNS数据集，可通过它们检索某个给定域名的子域名。只需在其搜索栏中输入域名，就可检索到相关的域名信息。读者可以利用DNSdumpster网站(<a target="_blank" rel="noopener" href="https://dnsdumpster.com/)%E3%80%81%E5%9C%A8%E7%BA%BFDNS%E4%BE%A6%E6%9F%A5%E5%92%8C%E6%90%9C%E7%B4%A2%E7%9A%84%E5%B7%A5%E5%85%B7%E6%8C%96%E6%8E%98%E5%87%BA%E6%8C%87%E5%AE%9A%E5%9F%9F%E6%BD%9C%E8%97%8F%E7%9A%84%E5%A4%A7%E9%87%8F%E5%AD%90%E5%9F%9F%E3%80%82">https://dnsdumpster.com/)、在线DNS侦查和搜索的工具挖掘出指定域潜藏的大量子域。</a></p>
+<p>4.证书透明度公开日志枚举：证书透明度(Certificate Transparency，CT)是证书授权机构（CA）的一个项目，证书授权机构会将每个SSL/TLS证书发布到公共日志中。一个SSL/TLS证书通常包含域名、子域名和邮件地址，这些也经常成为攻击者非常希望获得的有用信息。查找某个域名所属证书的最简单的方法就是使用搜索引擎搜索一些公开的CT日志。</p>
+<h4 id="收集常用端口信息"><a href="#收集常用端口信息" class="headerlink" title="收集常用端口信息"></a>收集常用端口信息</h4><p>在渗透测试的过程中，对端口信息的收集是一个很重要的过程，通过扫描服务器开放的端口以及从该端口判断服务器上存在的服务，就可以对症下药，便于我们渗透目标服务器。所以在端口渗透信息的收集过程中，我们需要关注常见应用的默认端口和在端口上运行的服务。最常见的扫描工具就是Nmap。在Banner信息中，可以得到包括软件开发商，软件名称，服务类型，版本号等信息，通过这些信息可以使用某些工具直接去使用相对应的exp去攻击。常用NC、Dmitry、NMAP、AMAP等工具进行Banner信息收集。下面简单展示NMAP和AMAP的使用方法。</p>
+<p>使用NMAP自带的Banner脚本获取Banner信息, 执行该工具的命令如下所示。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -sT -p1-200 --script&#x3D;banner ip</span><br></pre></td></tr></table></figure>
+<p>使用AMAP获取Banner信息，执行该工具的命令如下所示。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">amap -B ip 1*200</span><br></pre></td></tr></table></figure>
+<p>说明：THC-Amap是运行在Linux/UNIX/Windows 平台上的安全扫描软件，通过探测端口响应的应用程序指纹数据来识别应用程序和服务，远甚于通过缺省端口号来判断应用程序和服务的方法，其具有完美的SSL支持、完整的RPC探测等特点。</p>
+<p>在某些kali linux上，amap是预装的；在某些版本上，需要运行sudo apt install amap 命令手动安装。</p>
+<h4 id="指纹识别"><a href="#指纹识别" class="headerlink" title="指纹识别"></a>指纹识别</h4><p>本文所讲指纹是指网站CMS指纹识别、计算机操作系统及Web容器的指纹识别等。应用程序一般在html、js、css等文件中多多少少会包含一些特征码，比如WordPress在robots.txt中会包含wp-admin、首页index.php中会包含generator=wordpress 3.xx，这个特征就是这个CMS的指纹，那么当碰到其他网站也存在此特征时，就可以快速识别出该CMS，所以叫作指纹识别。</p>
+<p>在渗透测试中，对目标服务器进行指纹识别是相当有必要的，因为只有识别出相应的Web容器或者CMS,才能查找与其相关的漏洞,然后才能进行相应的渗透操作。</p>
+<p>CMS (Content Management System）又称整站系统或文章系统。开发者只要给客户一个软件包，客户自己安装配置好，就可以定期更新数据来维护网站，节省了大量的人力和物力。常见的CMS有Dedecms(织梦)、Discuz、PHPWEB、PHPWind、PHPCMS、ECShop、Dvbbs、SiteWeaver、ASPCMS、帝国、Z-Blog、WordPress等。</p>
+<p>代表工具有御剑Web指纹识别、WhatWeb、WebRobo、椰树、轻量WEB指纹识别等，可以快速识别一些主流CMS。</p>
+<h4 id="查找真实IP"><a href="#查找真实IP" class="headerlink" title="查找真实IP"></a>查找真实IP</h4><p>在渗透测试过程中，目标服务器可能只有一个域名，那么如何通过这个域名来确定目标服务器的真实IP对渗透测试来说就很重要。如果目标服务器不存在CDN，可以直接通过<a target="_blank" rel="noopener" href="http://www.ip138.com获取目标的一些p及域名信息.这里主要讲解在以下这几种情况下,如何绕过cdn寻找目标服务器的真实ip./">www.ip138.com获取目标的一些P及域名信息。这里主要讲解在以下这几种情况下，如何绕过CDN寻找目标服务器的真实IP。</a></p>
+<p><strong>1.目标服务器存在CDN：</strong>CDN即内容分发网络，主要解决因传输距离和不同运营商节点造成的网络速度性能低下的问题。就是一组在不同运营商之间的对接节点上的高速缓存服务器，把用户经常访问的静态数据资源（例如静态的html、css、js图片等文件)直接缓存到节点服务器上，当用户再次请求时，会直接分发到在离用户近的节点服务器上响应给用户，当用户有实际数据交互时才会从远程Web服务器上响应，这样可以大大提高网站的响应速度及用户体验。所以如果渗透目标购买了CDN服务，可以直接ping目标的域名，但得到的并非真正的目标Web服务器，只是离我们最近的一台目标节点的CDN服务器，这就导致了我们没法直接得到目标的真实IP段范围。</p>
+<p><strong>2.判断目标是否使用了CDN：</strong>通常会通过ping目标主域,观察域名的解析情况,以此来判断其是否使用了CDN。还可以利用在线网站17CE（<a target="_blank" rel="noopener" href="https://www.17ce.com/">https://www.17ce.com</a>)进行全国多地区的ping服务器操作,然后对比每个地区ping出的IP结果，查看这些IP是否一致，如果都是一样的，极有可能不存在CDN。如果IP大多不太一样或者规律性很强，可以尝试查询这些IP的归属地，判断是否存在CDN。</p>
+<p>**3.绕过CDN寻找真实IP:**在确认了目标确实用了CDN以后，就需要绕过CDN寻找目标的真实IP，下面介绍一些常规的方法。</p>
+<ul>
+<li>内部邮箱源。一般的邮件系统都在内部，没有经过CDN的解析，通过目标网站用户注册或者RSS订阅功能，查看邮件、寻找邮件头中的邮件服务器域名IP，ping这个邮件服务器的域名，就可以获得目标的真实IP（注意，必须是目标自己的邮件服务器，第三方或公共邮件服务器是没有用的）。</li>
+<li>扫描网站测试文件，如phpinfo、test等，从而找到目标的真实IP。</li>
+<li>分站域名。很多网站主站的访问量会比较大，所以主站都是挂CDN的，但是分站可能没有挂CDN，可以通过ping二级域名获取分站IP，可能会出现分站和主站不是同一个IP但在同一个C段下面的情况，从而能判断出目标的真实IP段。</li>
+<li>国外访问。国内的CDN往往只对国内用户的访问加速，而国外的CDN就不一定了。因此，通过国外在线代理网站App Synthetic Monitor（<a target="_blank" rel="noopener" href="https://asm.ca.com/en">https://asm.ca.com/en</a> /ping.php)访问，可能会得到真实的IP。</li>
+<li>查询域名的解析记录。也许目标很久以前并没有用过CDN，所以可以通过网站NETCRAFT(<a target="_blank" rel="noopener" href="https://www.netcraft.com/%EF%BC%89%E6%9D%A5%E8%A7%82%E5%AF%9F%E5%9F%9F%E5%90%8D%E7%9A%84IP%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95%EF%BC%8C%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%A4%A7%E8%87%B4%E5%88%86%E6%9E%90%E5%87%BA%E7%9B%AE%E6%A0%87%E7%9A%84%E7%9C%9F%E5%AE%9EIP%E6%AE%B5%E3%80%82">https://www.netcraft.com/）来观察域名的IP历史记录，也可以大致分析出目标的真实IP段。</a></li>
+<li>如果目标网站有自己的App，可以尝试利用Fiddler或Burp Suite抓取App的请求，从里面找到目标的真实IP。</li>
+<li>绕过CloudFlare CDN查找真实IP。现在很多网站都使用CloudFlare提供的CDN服务，在确定了目标网站使用CDN后，可以先尝试通过在线网站CloudFlareWatch (<a target="_blank" rel="noopener" href="http://www.crimeflare.us/cfs.html#box)%E5%AF%B9CloudFlare%E5%AE%A2%E6%88%B7%E7%BD%91%E7%AB%99%E8%BF%9B%E8%A1%8C%E7%9C%9F%E5%AE%9EIP%E6%9F%A5%E8%AF%A2%E3%80%82">http://www.crimeflare.us/cfs.html#box)对CloudFlare客户网站进行真实IP查询。</a></li>
+</ul>
+<p>4.<strong>验证获取的IP：</strong>找到目标的真实IP以后，如何验证其真实性呢?如果是Web，最简单的验证方法是直接尝试用IP访问，看看响应的页面是不是和访问域名返回的一样;或者在目标段比较大的情况下，借助类似Masscan的工具批扫描对应IP段中所有开了80、443、8080端口的IP，然后逐个尝试IP访问，观察响应结果是否为目标站点。</p>
+<h4 id="收集敏感目录文件"><a href="#收集敏感目录文件" class="headerlink" title="收集敏感目录文件"></a>收集敏感目录文件</h4><p>在渗透测试中，探测Web目录结构和隐藏的敏感文件是一个必不可少的环节，从中可以获取网站的后台管理页面、文件上传界面，甚至可能扫描出网站的源代码。</p>
+<p>针对网站目录的扫描主要有DirBuster、御剑后台扫描珍藏版、wwwscan、Spinder.py(轻量级快速单文件目录后台扫描)、Sensitivefilescan(轻量级快速单文件目录后台扫描)、Weakfilescan(轻量级快速单文件目录后台扫描）等工具。</p>
+<h3 id="第2章-搭建漏洞环境及实战"><a href="#第2章-搭建漏洞环境及实战" class="headerlink" title="第2章 搭建漏洞环境及实战"></a>第2章 搭建漏洞环境及实战</h3><h4 id="在linux系统中安装LANMP"><a href="#在linux系统中安装LANMP" class="headerlink" title="在linux系统中安装LANMP"></a>在linux系统中安装LANMP</h4><p>LANMP是Linux下Apache、Nginx、MySQL和PHP的应用环境，这里演示的是WDLinux的一款集成的安装包，操作起来非常简单。首先，下载需要的安装包，以v3为例，命令如下所示。</p>
+<p>wget <a target="_blank" rel="noopener" href="http://dl.wdlinux.cn/files/lanmp_v3.tar.gz">http://dl.wdlinux.cn/files/lanmp_v3.tar.gz</a></p>
+<p>下载完成后进行解压，解压文件的命令为tar zxvf lanmp_v3.tar.gz.</p>
+<p>Apache：Apache HTTP Server（简称 Apache）是 Apache 软件基金会的一个开放源码的网页服务器，可以在大多数计算机操作系统中运行，由于其多平台和安全性被广泛使用，是最流行的 Web 服务器端软件之一。它快速、可靠并且可通过简单的 API 扩展，将Perl/PHP/Python等解释器编译到服务器中。</p>
+<p>Nginx: Nginx(engine x) 是一个高性能的HTTP和反向代理web服务器，同时也提供IMAP/POP3/SMTP服务。Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru站点（俄文：Рамблер）开发的，第一个公开版本0.1.0发布于2004年10月4日。其特点是占有内存少，<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%B9%B6%E5%8F%91/11024806">并发</a>能力强，事实上nginx的并发能力在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户包括百度、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E4%BA%AC%E4%B8%9C/210931">京东</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%96%B0%E6%B5%AA/125692">新浪</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%BD%91%E6%98%93/185754">网易</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%85%BE%E8%AE%AF/112204">腾讯</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%B7%98%E5%AE%9D/145661">淘宝</a>等。</p>
+<p>MySQL：MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，属于 Oracle 旗下产品。在 WEB 应用方面，MySQL是最好的 RDBMS (Relational Database Management System，关系数据库管理系统) 应用软件之一。MySQL 软件采用了双授权政策，分为社区版和商业版，由于其体积小、速度快、总体拥有成本低，尤其是开放源码这一特点，一般中小型网站的开发都选择 MySQL 作为网站数据库。</p>
+<p>PHP：PHP（PHP: Hypertext Preprocessor）即“超文本预处理器”，是在服务器端执行的脚本语言，尤其适用于Web开发并可嵌入HTML中。该语言当初创建的主要目标是让开发人员快速编写出优质的web网站。 PHP同时支持面向对象和面向过程的开发，使用上非常灵活。经过二十多年的发展，随着php-cli相关组件的快速发展和完善，PHP已经可以应用在 TCP/UDP服务、高性能Web、WebSocket服务、物联网、实时通讯、游戏、微服务等非 Web 领域的系统研发。</p>
+<p>根据W3Techs2019年12月6号发布的统计数据，PHP在WEB网站服务器端使用的编程语言所占份额高达78.9%  。在内容管理系统的网站中，有58.7%的网站使用WordPress（PHP开发的CMS系统），这占所有网站的25.0%。 </p>
+<h4 id="在Windows系统中安装WAMP"><a href="#在Windows系统中安装WAMP" class="headerlink" title="在Windows系统中安装WAMP"></a>在Windows系统中安装WAMP</h4><p>Windows下实现php开发环境的方法就是将数据库mysql,服务器apache,开发语言php集合在一起。WAMPserver就是这样一个集成环境。</p>
+<p>wamp官方网址：<a target="_blank" rel="noopener" href="http://www.wampserver.com/en/">http://www.wampserver.com/en/</a> 是lamp架构在windows系统上的版本。下载后运行wampserver软件，一直点击下一步即可以完成安装。</p>
+<p>phpStudy是一个PHP调试环境的程序集成包。该程序包集成最新的Apache+PHP+MySQL+phpMyAdmin+ZendOptimizer，一次性安装，无须配置即可使用，是非常方便、好用的PHP调试环境。该程序不仅包括PHP调试环境，还包括了开发工具、开发手册等。</p>
+<p>首先下载PhpStudy集成环境，可在PhpStudy官网进行下载；然后解压安装包进行安装，可以进行自定义安装；接着打开PhpStudy，点击【一键启动】即可启动PHP环境。</p>
+<h4 id="搭建DVWA漏洞环境"><a href="#搭建DVWA漏洞环境" class="headerlink" title="搭建DVWA漏洞环境"></a>搭建DVWA漏洞环境</h4><p>DVWA (Damn Vulnerable Web Application) 是用 PHP+MySQL 编写的一套用于漏洞检测和教学的程序，支持多种数据库，包括了 SQL 注入、XSS 等一些常见的安全漏洞。</p>
+<p>搭建DVWA靶场环境：</p>
+<p>启动phpstudy，在浏览器中打开“phpMyAdmin”；</p>
+<p>点击数据库，创建名为dvwa的数据库；</p>
+<p>下载dvwa的压缩包DVWA-master，解压后放到phpstudy的web根目录,即www目录下；</p>
+<p>将“DVWA-master”文件夹下的“config”文件夹中的“config.inc.php .dist”文件拷贝一份，其中一份不做修改，另外一份进行修改并去掉后缀名.dist。修改config.inc.php,修改内容如下红色方框：</p>
+<p><img src="https://gitee.com/shao-caiyin/images/raw/master/img/image-20211106162414971.png" alt="image-20211106162414971"></p>
+<p>打开浏览器，访问“127.0.0.1/dvwa”，即可打开部署好的DVWA环境，该环境用于安全测试使用。</p>
+<p>默认没有数据库表，进入 Setup / Reset DB,拉到最下面，创建数据库表.</p>
+<p>这样DVWA就创建好了。将安全等级调成low，默认是impossible。</p>
+<h4 id="搭建SQL注入平台"><a href="#搭建SQL注入平台" class="headerlink" title="搭建SQL注入平台"></a>搭建SQL注入平台</h4><p>为了学习、练习SQL注入技术，除了使用DVWA实验环境外，也可以搭建和使用SQLi-labs实验环境。</p>
+<p>sq Ii-labs是一款学习SQL注入的开源平台，共有75种不同类型的注入。</p>
+<p>下载sqli-labs的压缩包后，把解压文件放到“phpstudy”的“WWW”目录下。</p>
+<p> 打开sql-connections文件夹中的db-creds.inc文件，可以修改数据库的账号、密码、库名等配置信息。</p>
+<p>修改完数据库密码后，打开浏览器访问“127.0.0.1/sq1i-labs/”，接着单击“Setup/reset Database for labs”。</p>
+<p>如果看到数据库中的各种tables创建或清理完毕，说明安装成功。</p>
+<h4 id="搭建XSS测试平台"><a href="#搭建XSS测试平台" class="headerlink" title="搭建XSS测试平台"></a>搭建XSS测试平台</h4><p>可以使用一些在线练习平台。如：</p>
+<p><a target="_blank" rel="noopener" href="https://www.ichunqiu.com/experiment">https://www.ichunqiu.com/experiment</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.hetianlab.com/experiments">https://www.hetianlab.com/experiments</a></p>
+<p><a target="_blank" rel="noopener" href="http://test.ctf8.com/">http://test.ctf8.com/</a></p>
+<h3 id="第3章-常用的渗透测试工具"><a href="#第3章-常用的渗透测试工具" class="headerlink" title="第3章 常用的渗透测试工具"></a>第3章 常用的渗透测试工具</h3><h4 id="SQLMap详解"><a href="#SQLMap详解" class="headerlink" title="SQLMap详解"></a>SQLMap详解</h4><p>sqlmap是渗透测试中常用的一个SQL注入工具。它被预装到了kali Linux中。sqlmap支持五种不同的注入模式：</p>
+<ul>
+<li>基于布尔的盲注，即可以根据返回页面判断条件真假的注入。</li>
+<li>基于时间的盲注，即不能根据页面返回内容判断任何信息，用条件语句查看时间延迟语句是否执行（即页面返回时间是否增加）来判断。</li>
+<li>基于报错注入，即页面会返回错误信息，或者把注入的语句的结果直接返回在页面中。</li>
+<li>联合查询注入，可以使用union的情况下的注入。</li>
+<li>堆查询注入，可以同时执行多条语句的执行时的注入。</li>
+</ul>
+<p>命令基本格式：</p>
+<p>默认使用level1检测全部数据库类型   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -u “http:&#x2F;&#x2F;www.vuln.cn&#x2F;post.php?id&#x3D;1″</span><br></pre></td></tr></table></figure>
+<p>指定数据库类型为mysql，级别为3（共5级级别越高，检测越全面）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -u “http:&#x2F;&#x2F;www.vuln.cn&#x2F;post.php?id&#x3D;1″ –dbms mysql –level 3</span><br></pre></td></tr></table></figure>
+<p><strong>跟随302跳转：</strong>当注入页面错误的时候，自动跳转到另一个页面的时候需要跟随302， 当注入错误的时候，先报错再跳转的时候，不需要跟随302。目的：要追踪到错误信息。</p>
+<p><strong>cookie注入：</strong>当程序有防get注入的时候，可以使用cookie注入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -u “http:&#x2F;&#x2F;www.baidu.com&#x2F;shownews.asp” –cookie “id&#x3D;11″ –level 2（只有level达到2才会检测cookie）</span><br></pre></td></tr></table></figure>
+<p><strong>从post数据包中注入：</strong>可以使用burpsuite或者temperdata等工具来抓取post包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -r “c:\tools\request.txt” -p “username” –dbms mysql 指定username参数</span><br></pre></td></tr></table></figure>
+<p>获取数据库基本信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -u “http:&#x2F;&#x2F;www.vuln.cn&#x2F;post.php?id&#x3D;1″ –dbms mysql –level 3 –dbs</span><br></pre></td></tr></table></figure>
+<p>查询有哪些数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -u “http:&#x2F;&#x2F;www.vuln.cn&#x2F;post.php?id&#x3D;1″ –dbms mysql –level 3 -D test –tables</span><br></pre></td></tr></table></figure>
+<p>查询test数据库中有哪些表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -u “http:&#x2F;&#x2F;www.vuln.cn&#x2F;post.php?id&#x3D;1″ –dbms mysql –level 3 -D test -T admin –columns</span><br></pre></td></tr></table></figure>
+<p>查询test数据库中admin表有哪些字段，dump出字段username与password中的数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -u “http:&#x2F;&#x2F;www.vuln.cn&#x2F;post.php?id&#x3D;1″ –dbms mysql –level 3 -D test -T admin -C “username,password” –dump</span><br></pre></td></tr></table></figure>
+<p>从数据库中搜索字段，在dedecms数据库中搜索字段admin或者password</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -r “c:\tools\request.txt” –dbms mysql -D dedecms –search -C admin,password </span><br></pre></td></tr></table></figure>
+<p><strong>读取与写入文件：</strong>首先找需要网站的物理路径，其次需要有可写或可读权限。</p>
+<p>–file-read=RFILE 从后端的数据库管理系统文件系统读取文件 （物理路径）</p>
+<p>–file-write=WFILE 编辑后端的数据库管理系统文件系统上的本地文件 （mssql xp_shell） </p>
+<p>–file-dest=DFILE 后端的数据库管理系统写入文件的绝对路径</p>
+<p><strong>示例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -r “c:\request.txt” -p id –dbms mysql –file-dest “e:\php\htdocs\dvwa\inc\include\1.php” –file-write “f:\webshell\1112.php”</span><br><span class="line"></span><br><span class="line">使用shell命令：</span><br><span class="line"></span><br><span class="line">sqlmap -r “c:\tools\request.txt” -p id –dms mysql –os-shell </span><br><span class="line"></span><br><span class="line">接下来指定网站可写目录： </span><br><span class="line"></span><br><span class="line">“E:\php\htdocs\dvwa”</span><br><span class="line"></span><br><span class="line">\#注：mysql不支持列目录，仅支持读取单个文件。sqlserver可以列目录，不能读写文件，但需要一个（xp_dirtree函数）</span><br></pre></td></tr></table></figure>
+<p>sqlmap详细命令：</p>
+<p>•–is-dba 当前用户权限（是否为root权限）</p>
+<p>•–dbs 所有数据库</p>
+<p>•–current-db 网站当前数据库</p>
+<p>•–users 所有数据库用户</p>
+<p>•–current-user 当前数据库用户</p>
+<p>•–random-agent 构造随机user-agent</p>
+<p>•–passwords 数据库密码</p>
+<p>•–proxy <a target="_blank" rel="noopener" href="http://local:8080/">http://local:8080</a> –threads 10 (可以自定义线程加速) 代理</p>
+<p>•–time-sec=TIMESEC DBMS响应的延迟时间（默认为5秒）</p>
+<p>Options（选项）：</p>
+<p>•–version 显示程序的版本号并退出</p>
+<p>•-h, –help 显示此帮助消息并退出</p>
+<p>•-v VERBOSE 详细级别：0-6（默认为1）</p>
+<h4 id="Burpsuite"><a href="#Burpsuite" class="headerlink" title="Burpsuite"></a>Burpsuite</h4><p>（1）Proxy</p>
+<p>Burp Proxy是利用Burp开展测试流程的核心，通过代理模式，可以让我们拦截、查看、修改所有在客户端与服务端之间传输的数据。Burp Proxy 的拦截功能主要由Intercept选项卡中的Forward、Drop、Interceptionison/off和Action构成，它们的功能如下所示。</p>
+<ul>
+<li>Forward表示将拦截的数据包或修改后的数据包发送至服务器端。Drop表示丢弃当前拦截的数据包。</li>
+<li>Interception is on表示开启拦截功能，单击后变为Interception is off，表示关闭拦截功能。</li>
+<li>单击Action按钮，可以将数据包进一步发送到Spider 、 Scanner .Repeater.Intruder等功能组件做进一步的测试，同时也包含改变数据包请求方式及其body的编码等功能。</li>
+</ul>
+<p>打开浏览器，输入需要访问的URL并按回车键，这时将看到数据流量经过BurpProxy并暂停，直到单击Forward按钮，才会继续传输下去。如果单击了Drop按钮，这次通过的数据将丢失，不再继续处理。</p>
+<p>当Burp Suite拦截的客户端和服务器交互之后，我们可以在 Burp Suite的消息分析选项中查看这次请求的实体内容、消息头、请求参数等信息。Burp有四种消息类型显示数据包:Raw、Params、Headers和 Hex。</p>
+<ul>
+<li>Raw主要显示Web 请求的raw格式，以纯文本的形式显示数据包，包含请求地址、HTTP协议版本、主机头、浏览器信息、Accept可接受的内容类型、字符集、编码方式、cookie等，可以通过手动修改这些信息，对服务器端进行渗透测试。</li>
+<li>Params主要显示客户端请求的参数信息，包括GET或者POST请求的参数、cookie参数。可以通过修改这些请求参数完成对服务器端的渗透测试。</li>
+<li>Headers中显示的是数据包中的头信息，以名称、值的形式显示数据包。</li>
+<li>Hex对应的是Raw中信息的二进制内容，可以通过Hex编辑器对请求的内容进行修改，在进行00截断时非常好用。</li>
+</ul>
+<p><strong>Scanner</strong></p>
+<p>Burp Scanner主要用于自动检测Web系统的各种漏洞。本小节介绍Burp Scanner的基本使用方法，在实际使用中可能会有所改变，但大体环节如下。<br>首先，确认Burp Suite正常启动并完成浏览器代理的配置。然后进入Burp Proxy,关闭代理拦截功能，快速浏览需要扫描的域或URL模块，此时在默认情况下，Burp Scanner会扫描通过代理服务的请求，并对请求的消息进行分析来辨别是否存在系统漏洞。而且当我们打开 Burp Target时，也会在站点地图中显示请求的URL树。<br>我们随便找一个网站进行测试，选择Burp Target的站点地图选项下的链接，在其链接URL上右击选择“Actively scan this host”，此时会弹出过滤设置，保持默认选项即可扫描整个域。</p>
+<p>也可以在Proxy下的HTTP history中，选择某个节点上的链接URL并右击选择Doan activescan进行扫描</p>
+<p><strong>Intruder</strong></p>
+<p>Intruder是一个定制的高度可配置的工具，可以对Web应用程序进行自动化攻击，如通过标识符枚举用户名、ID和账户号码,模糊测试，SQL注入，跨站，目录遍历等。</p>
+<p>它的工作原理是Intruder在原始请求数据的基础上，通过修改各种请求参数获取不同的请求应答。在每一次请求中，Intruder通常会携带一个或多个有效攻击载荷(Payload)，在不同的位置进行攻击重放,通过应答数据的比对分析获得需要的特征数据。Burp Intruder通常被应用于以下场景。</p>
+<ul>
+<li>标识符枚举。Web应用程序经常使用标识符引用用户、账户、资产等数据信息。例如，用户名、文件ID和账户号码。</li>
+<li>提取有用的数据。在某些场景下，不是简单地识别有效标识符，而是通过简单标识符提取其他数据。例如，通过用户的个人空间ID获取所有用户的其个人空间的名字和年龄。</li>
+<li>模糊测试。很多输入型的漏洞（如SQL注入、跨站点脚本和文件路径遍历）可以通过请求参数提交各种测试字符串，并分析错误消息和具他异常情况，来对应用程序进行检测。受限于应用程序的大小和复杂性，手动执行这个测试是一个耗时且烦琐的过程，因此可以设置Payload，通过Burp Intruder自动化地对Web应用程序进行模糊测试。</li>
+</ul>
+<p><strong>Repeater</strong></p>
+<p>Burp Repeater是一个手动修改、补发个别HTTP请求,并分析它们的响应的工具。它最大的用途就是能和其他Burp Suite 工具结合起来使用。可以将目标站点地图、BurpProxy浏览记录、Burp Intruder的攻击结果，发送到Repeater 上，并手动调整这个请求来对漏洞的探测或攻击进行微调。</p>
+<p>Repeater分析选项有4种:Raw、Params、Headers和 Hex。</p>
+<ul>
+<li>Raw:显示纯文本格式的消息。在文本面板的底部有一个搜索和加亮的功能，可以用来快速定位需要寻找的字符串，如出错消息。利用搜索栏左边的弹出项，能控制状况的灵敏度，以及是否使用简单文本或十六进制进行搜索。</li>
+<li>Params:对于包含参数（URL查询字符串、cookie头或者消息体）的请求Params选项会把这些参数显示为名字/值的格式，这样就可以简单地对它们进行查看和修改了。</li>
+<li>Headers:将以名字/值的格式显示HTTP的消息头，并且以原始格式显示消息体。Hex:允许直接编辑由原始二进制数据组成的消息。</li>
+</ul>
+<p>渗透测试过程中，我们经常使用Repeater进行请求与响应的消息验证分析，例如修改请求参数、验证输入的漏洞;修改请求参数、验证逻辑越权;从拦截历史记录中，捕获特征性的请求消息进行请求重放。</p>
+<p><strong>Comparer</strong></p>
+<p>Burp Comparer在 Burp Suite 中主要提供一个可视化的差异比对功能，来对比分析两次数据之间的区别，使用到的场合有:</p>
+<ul>
+<li>枚举用户名的过程中，对比分析登录成功和失败时，服务端反馈结果的区别。</li>
+<li>使用Intruder进行攻击时，对于不同的服务端响应，可以很快分析出两次响应的区别在哪里。</li>
+<li>进行SQL注入的盲注测试时，比较两次响应消息的差异，判断响应结果与注入条件的关联关系。</li>
+</ul>
+<p>使用Comparer时有两个步骤，先是数据加载，然后是差异分析。Comparer数据加载的常用方式如下所示。</p>
+<ul>
+<li>从其他Burp工具通过上下文菜单转发过来。</li>
+<li>直接粘贴。</li>
+<li>从文件里加载。</li>
+</ul>
+<p>加载完毕后，如果选择两次不同的请求或应答消息，则下发的比较按钮将被激活，此时可以选择文本比较或字节比较。</p>
+<h4 id="Nmap"><a href="#Nmap" class="headerlink" title="Nmap"></a>Nmap</h4><p>Nmap (Network Mapper，网络映射器）是一款开放源代码的网络探测和安全审核工具。它被设计用来快速扫描大型网络，包括主机探测与发现、开放的端口情况、操作系统与应用服务指纹识别、WAF识别及常见安全漏洞。Nmap的特点如下所示。</p>
+<ul>
+<li> 主机探测:探测网络上的主机，如列出响应TCP和ICMP请求、ICMP请求、开放特别端口的主机。</li>
+<li> 端口扫描:探测目标主机所开放的端口。</li>
+<li> 版本检测:探测目标主机的网络服务，判断其服务名称及版本号。</li>
+<li>系统检测:探测目标主机的操作系统及网络设备的硬件特性。</li>
+<li>支持探测脚本的编写:使用Nmap的脚本引擎(NSE）和Lua编程语言</li>
+</ul>
+<p>Nmap的下载地址为<a target="_blank" rel="noopener" href="https://nmap.org/download.html">https://nmap.org/download.html</a></p>
+<p><strong>扫描参数</strong></p>
+<p>进入安装目录后，在命令行直接执行Nmap或查看帮助文档,输入nmap –help将显示Nmap用法及其功能。</p>
+<p>首先介绍设置扫描目标时用到的相关参数，如下所示。</p>
+<p>l -iL:从文件中导入目标主机或目标网段。</p>
+<p>l -iR:随机选择目标主机。</p>
+<p>l –exclude:后面跟的主机或网段将不在扫描范围内。</p>
+<p>l –excludefile:导入文件中的主机或网段将不在扫描范围中。与主机发现方法相关的参数如下。</p>
+<p>l -sL: List Scan(列表扫描），仅列举指定目标的IP，不进行主机发现。</p>
+<p>l -sn: Ping Scan，只进行主机发现，不进行端口扫描。</p>
+<p>l -Pn:将所有指定的主机视作已开启，跳过主机发现的过程。</p>
+<p>l -PS/PA/PU/PY[portlist]:使用TCP SYN/ACK或SCTP INIT/ECHO方式来发现。-PE/PP/PM:使用ICMP echo、timestamp、netmask请求包发现主机。</p>
+<p>l -PO[protocollist]:使用IP协议包探测对方主机是否开启。</p>
+<p>l -n/-R: -n表示不进行DNS解析;-R表示总是进行DNS解析。</p>
+<p>l –dns-servers &lt;serv1[,serv2]….&gt;:指定DNS服务器。</p>
+<p>l –system-dns:指定使用系统的DNS服务器。</p>
+<p>l –traceroute:追踪每个路由节点。</p>
+<p>与常见的端口扫描方法相关的参数如下。</p>
+<p>l -sS/sT/sA/sW/sM:指定使用TCP SYN/Connect()/ACK/Window/Maimon scans的方式对目标主机进行扫描。</p>
+<p>l -sU:指定使用UDP扫描的方式确定目标主机的UDP端口状况。</p>
+<p>l -sN/sF/sX:指定使用TCP Null/FIN/Xmas scans秘密扫描的方式协助探测对方的TCP端口状态。</p>
+<p>l –scanflags <flags>:定制TCP包的flags。</p>
+<p>l -sl &lt;zombie host[ :probeport]&gt;:指定使用Idle scan的方式扫描目标主机(前提是需要找到合适的zombie host) 。</p>
+<p>l -sY/sZ:使用SCTP INIT/COOKIE-ECHO扫描SCTP协议端口的开放情况。</p>
+<p>l -sO:使用IP protocol扫描确定目标机支持的协议类型。</p>
+<p>l -b <FTP relay host>:使用FTP bounce scan扫描方式。</p>
+<p>跟端口参数与扫描顺序的设置相关的参数如下。</p>
+<p>l -p <port ranges>:扫描指定的端口。</p>
+<p>l -F: Fast mode （快速模式），仅扫描TOP 100的端口。</p>
+<p>l -r:不进行端口随机打乱的操作（如无该参数，Nmap会将要扫描的端口以随机顺序的方式进行扫描，让Nmap的扫描不易被对方防火墙检测到）。</p>
+<p>l –top-ports <number>:扫描开放概率最高的number个端口(Nmap的作者曾做过大规模的互联网扫描，以此统计网络上各种端口可能开放的概率，并排列出最有可能开放端口的列表，具体可以参见nmap-services文件。默认情况下，Nmap会扫描最有可能的1000个TCP端口）。</p>
+<p>l –port-ratio <ratio>:扫描指定频率以上的端口。与上述–top-ports类似,这里以概率作为参数，概率大于–port-ratio的端口才被扫描。显然参数必须在0~1之间，想了解具体的概率范围可以查看nmap-services文件。</p>
+<p>与版本侦测相关的参数如下所示。</p>
+<p>l -sV:指定让Nmap进行版本侦测。</p>
+<p>l –version-intensity <level>:指定版本侦测的强度（0~9)，默认为7。数值越高，探测出的服务越准确，但是运行时间会比较长。</p>
+<p>l –version-light:指定使用轻量级侦测方式( intensity 2)。</p>
+<p>l –version-all:尝试使用所有的probes进行侦测（ intensity 9) 。</p>
+<p>l –version-trace:显示出详细的版本侦测过程信息。</p>
+<p>在了解以上参数及其含义后，再来看用法会更好理解，扫描命令格式: Nmap+扫描参数+目标地址或网段。比如一次完整的Nmap扫描命令如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -T4 -A -v ip</span><br></pre></td></tr></table></figure>
+<p>其中-A表示使用进攻性（Aggressive）方式扫描;-T4表示指定扫描过程使用的时序(Timing)，共有6个级别(O~5)，级别越高，扫描速度越快，但也容易被防火墙或IDS检测并屏蔽掉，在网络通信状况良好的情况下推荐使用T4。-v表示显示冗余(verbosity）信息，在扫描过程中显示扫描的细节，有助于让用户了解当前的扫描状态。</p>
+<p><strong>常用方法</strong></p>
+<p>Nmap的参数较多，以下是在渗透测试过程中比较常见的命令。</p>
+<p>\1. 扫描单个目标地址:在Nmap后面直接添加目标地址即可扫描，如图3.23所示。</p>
+<p>namp 192.168.0.100</p>
+<p>  \2. 扫描多个目标地址:如果目标地址不在同一网段，或在同一网段但不连续且数量不多，可以使用该方法进行扫描。</p>
+<p>namp 192.168.0.100 192.168.0.105</p>
+<p>  \3. 扫描一个范围内的目标地址:可以指定扫描一个连续的网段，中间使用“-”连接，例如下列命令表示扫描范围为192.168.0.l00～192.168.0.110。</p>
+<p>namp 192.168.0.100-110</p>
+<p>  \4. 扫描目标地址所在的某个网段:以C段为例，如果目标是一个网段，则可以通过添加子网掩码的方式扫描，下列命令表示扫描范围为192.168.0.1～192.168.0.255。</p>
+<p>namp 192.168.0.100/24</p>
+<p>  5．扫描主机列表targets.txt 中的所有目标地址:扫描targets.txt中的地址或者网段,此处导入的是绝对路径，如果targets.txt文件与nmap.exe在同一个目录下，则直接引用文件名即可。</p>
+<p>nmap -iL C: \Users \Aerfa \Desktop\targets.txt</p>
+<p>​      6．扫描除某一个目标地址之外的所有目标地址:下列命令表示扫描除192.168.0.105之外的其他192.168.0.x地址，从扫描结果来看确实没有对192.168.0.105进行扫描。</p>
+<p>namp 192.168.0.100/24 -exclude 192.168.0.105</p>
+<p>​     7．扫描除某一文件中的目标地址之外的目标地址:下列命令表示扫描除了target.txt文件夹中涉及的地址或网段之外的目标地址。还是以扫描192.168.0.x网段为例，在targets.txt中添加192.168.0.100和192.168.0.105从扫描结果来看已经证实该方法有效可用。</p>
+<p>nmap 192.168.0.100/24 -excludefile C:\Users \Aerfa \Desktop\targets.txt</p>
+<p>​    8．扫描某一目标地址的21、22、23、80端口:如果不需要对目标主机进行全端口扫描，只想探测它是否开放了某一端口，那么使用-p参数指定端口号，将大大提升扫描速度。</p>
+<p>nmap 192.168.0.100 -p 21,22,23,80</p>
+<p> 9．对目标地址进行路由跟踪:下列命令表示对目标地址进行路由跟踪。</p>
+<p>namp –traceroute 192.168.0.105</p>
+<p> \10. 扫描目标地址所在C段的在线状况:下列命令表示扫描目标地址所在C段的在线状况。</p>
+<p>namp 192.168.0.100/24</p>
+<p> \11. 目标地址的操作系统指纹识别:下列命令表示通过指纹识别技术识别目标地址的操作系统的版本,如图3-58所示。</p>
+<p>namp -0 192.168.0.105</p>
+<p> \12. 目标地址提供的服务版本检测:下列命令表示检测目标地址开放的端口对应的服务版本信息。</p>
+<p>Namp -sV 192.168.0.105</p>
+<p> \13. 探测防火墙状态:在实战中，可以利用FIN扫描的方式探测防火墙的状态。FIN扫描用于识别端口是否关闭，收到RST回复说明该端口关闭，否则就是open或filtered状态。</p>
+<p>namp -sF -T4 192.168.0.105</p>
+<h3 id="第4章-Web安全原理剖析"><a href="#第4章-Web安全原理剖析" class="headerlink" title="第4章  Web安全原理剖析"></a>第4章  Web安全原理剖析</h3><h4 id="web安全基础"><a href="#web安全基础" class="headerlink" title="web安全基础"></a>web安全基础</h4><p><strong>抓包</strong></p>
+<p>标准格式：</p>
+<p><a href="http://www.xxxx.com:(80)/phpcms/show.php?id=35">http://www.xxxx.com:(80)/phpcms/show.php?id=35</a></p>
+<p>scheme:指定使用的协议</p>
+<p>host：HTTP服务器的IP地址或域名</p>
+<p>port#：默认端口课省略，其余端口需注明</p>
+<p>path：访问资源的路径</p>
+<p>query-string：发送给http服务器的数据</p>
+<p>HTTP/1.1中定义了5类状态码，状态码由三位数字组成，第一个数字定义了响应的类别</p>
+<ul>
+<li>1××  提示信息-表示请求已被成功接收，继续处理</li>
+<li>2××  成功-表示请求已被成功接收，理解，接受</li>
+<li>3××  重定向-要完成请求必须进行更进一步的处理</li>
+<li>4××  客户端错误-请求语法错误或请求无法实现</li>
+<li>5××  服务端错误-服务器请求时出错</li>
+</ul>
+<p><strong>HTTP协议定义的与服务器交互的方法：</strong>GET,POST,PUT,DELETE</p>
+<p>GET一般用于获取/查询资源信息，POST一般用于更新资源信息</p>
+<ul>
+<li>GET提交的数据会放在URL之后，以？分割URL和传输数据，参数之间以&amp;相连，如：EditPosts.aspx?name=test1&amp;id=12345</li>
+<li>POST方法是把提交的数据放在HTTP包含的Body中</li>
+</ul>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>

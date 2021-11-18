@@ -115,6 +115,19 @@
 <p>（2）存取时间与物理地址有关（串行访问）    顺序存取存储器（磁带）     直接存取存储器（磁盘）</p>
 <p><strong>3.按在计算机中的作用分类</strong></p>
 <p><img src="https://gitee.com/shao-caiyin/images/raw/master/img/image-20210727172426660.png" alt="image-20210727172426660"></p>
+<h4 id="半导体随机存取存储器"><a href="#半导体随机存取存储器" class="headerlink" title="半导体随机存取存储器"></a>半导体随机存取存储器</h4><p><img src="https://gitee.com/shao-caiyin/images/raw/master/img/image-20211103190307239.png" alt="image-20211103190307239"></p>
+<p><img src="https://gitee.com/shao-caiyin/images/raw/master/img/image-20211103190902104.png" alt="image-20211103190902104"></p>
+<p><img src="https://gitee.com/shao-caiyin/images/raw/master/img/image-20211103215740119.png" alt="image-20211103215740119"></p>
+<h4 id="数据寻址"><a href="#数据寻址" class="headerlink" title="数据寻址"></a>数据寻址</h4><p><img src="https://gitee.com/shao-caiyin/images/raw/master/img/image-20211106111844994.png" alt="image-20211106111844994"></p>
+<p>CPU的控制方式：产生不同微操作命令序列所用的时序控制方式。</p>
+<p>1.同步控制方式：整个系统所有的控制信号均来自一个统一的时钟信号。优点控制电路简单，缺点运行速度慢</p>
+<p>2.异步控制方式     3.联合控制方式</p>
+<h4 id="微程序"><a href="#微程序" class="headerlink" title="微程序"></a>微程序</h4><p>工作原理：事先把微操作控制信号存储在一个专门的存储器（控制存储器）中，将每一条机器指令编写成一个微程序，这些微程序可以存到一个控制存储器中，用寻址用户程序机器指令的方法来寻址每个微程序中的微指令。</p>
+<p><img src="https://gitee.com/shao-caiyin/images/raw/master/img/image-20211115165122881.png" alt="image-20211115165122881"></p>
+<p>1.微命令与微操作：微命令是微操作的控制信号，微操作是微命令的执行过程。</p>
+<p>2.微指令与微周期：微指令是若干微命令的集合，微周期通常指从控制存储器中读取一条微指令并执行相应的微操作所需的时间。</p>
+<p>3.主存储器与控制存储器：<strong>主存储器</strong>用于存放程序和数据，在CPU外部，用RAM实现；<strong>控制存储器</strong>用于存放微程序，在CPU内部，用ROM实现。</p>
+<p>4.程序与微程序：程序是指令的有序集合，用于完成特定的功能；微程序是微指令的有序集合，一条指令的功能由一段微程序来实现。</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
